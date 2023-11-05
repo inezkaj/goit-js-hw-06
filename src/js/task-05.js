@@ -1,6 +1,8 @@
 const defaultName = `Anonymous`;
-document.querySelector("#name-input").addEventListener("input", (event) => {
+const nameInp = document.querySelector("#name-input");
+const nameOut = document.querySelector("#name-output");
+
+nameInp.addEventListener("input", (event) => {
   console.log(event.target.value);
-  document.querySelector("#name-output").textContent =
-    event.target.value || defaultName;
+  nameOut.textContent = event.target.value || defaultName;
 });
